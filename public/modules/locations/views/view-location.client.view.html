@@ -1,0 +1,32 @@
+<section data-ng-controller="LocationsController" data-ng-init="toViewLocation()">
+    <div class="page-header">
+        <h1 data-ng-bind="location.name"></h1>
+    </div>
+
+    <div class="col-md-12">
+
+        <form novalidate>
+            <formly-form model="location" fields="formFields">
+            </formly-form>
+        </form>
+
+        <hr/>
+        <div data-ng-show="((authentication.user) && (authentication.user._id == location.user._id))">
+            <a type="button" class="btn btn-info" href="/#!/locations/create">
+            <i class="glyphicon glyphicon-open"></i> New Location
+            </a>
+            <a class="btn btn-primary" href="/#!/locations">
+                <i class="glyphicon glyphicon-list"></i> List Locations
+            </a>
+            <a class="btn btn-success" href="/#!/locations/{{location._id}}/edit">
+                <i class="glyphicon glyphicon-edit"></i> Edit
+            </a>
+            <a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove()" item="location">
+                <i class="glyphicon glyphicon-remove-circle"></i> Delete
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

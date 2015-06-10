@@ -1,0 +1,36 @@
+<section data-ng-controller="LocationsController">
+    <div class="page-header">
+        <h1>Locations
+          <a type="button" class="btn btn-success pull-right" href="/#!/locations/create">
+            <i class="glyphicon glyphicon-open"></i> New Location
+          </a>
+        </h1>
+    </div>
+    <div>
+        <table ng-table="tableParams" show-filter="true" class="ng-table-responsive">
+            <tr ng-repeat="location in $data">
+                <td data-title="'Type'" sortable="'type'" filter="{ 'type':'text' }">{{location.type}}</td>
+                <td data-title="'Length'" sortable="'length'" filter="{ 'length': 'text' }">{{location.length}}</td>
+                <td data-title="'Color'" sortable="'color'" filter="{ 'color': 'text' }">{{location.color}}</td>
+                <td data-title="'Location'" sortable="'location'" filter="{ 'location': 'text' }">{{location.location}}</td>
+                <td data-title="'Shipment'" sortable="'shipment'" filter="{ 'shipment': 'text' }">{{location.shipment}}</td>
+                <td data-title="'Quantity'" sortable="'quantity'" filter="{ 'quantity': 'text' }">{{location.quantity}}</td>
+                <td>
+                    <div class="table-actions">
+                <td>
+                   <div class="table-actions">
+                        <a class="btn btn-default" title="View" href="/#!/locations/{{location._id}}">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a class="btn btn-default" title="Edit" href="/#!/locations/{{location._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove(location)" item="location">
+                                  <span class="glyphicon glyphicon-remove-circle"></span>
+                              </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
