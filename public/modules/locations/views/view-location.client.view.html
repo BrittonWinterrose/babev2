@@ -4,13 +4,6 @@
     </div>
 
     <div class="col-md-12">
-
-        <form novalidate>
-            <formly-form model="location" fields="formFields">
-            </formly-form>
-        </form>
-
-        <hr/>
         <div data-ng-show="((authentication.user) && (authentication.user._id == location.user._id))">
             <a type="button" class="btn btn-info" href="/#!/locations/create">
             <i class="glyphicon glyphicon-open"></i> New Location
@@ -26,6 +19,14 @@
             </a>
 
         </div>
+        
+	<form novalidate>
+            <formly-form model="location" fields="formFields">
+            </formly-form>
+        </form>
+
+        <hr/>
+
 
     </div>
 
