@@ -9,12 +9,12 @@
     <div>
         <table ng-table="tableParams" show-filter="true" class="ng-table-responsive">
             <tr ng-repeat="location in $data">
-                <td data-title="'Type'" id="td1" sortable="'type'" filter="{ 'type':'text' }">{{location.type}}</td>
-                <td data-title="'Length'" id="td2" sortable="'length'" filter="{ 'length': 'text' }">{{location.length}}</td>
-                <td data-title="'Color'" id="td3" sortable="'color'" filter="{ 'color': 'text' }">{{location.color}}</td>
-                <td data-title="'Location'" id="td4" sortable="'location'" filter="{ 'location': 'text' }">{{location.location}}</td>
-                <td data-title="'Shipment'" id="td5" sortable="'shipment'" filter="{ 'shipment': 'text' }">{{location.shipment}}</td>
-                <td data-title="'Quantity'" id="td6" sortable="'quantity'" filter="{ 'quantity': 'text' }">{{location.quantity}}</td>
+                <td data-title="'PO #'" id="td1" sortable="'po'" filter="{ 'type':'text' }">{{location.po}}</td>
+                <td data-title="'UPC'" id="td2" sortable="'upc'" filter="{ 'length': 'text' }">{{location.upc}}</td>
+                <td data-title="'Item'" id="td3" sortable="'item'" filter="{ 'color': 'text' }">{{location.item}}</td>
+                <td data-title="'Quantity'" id="td4" sortable="'quantity'" filter="{ 'quantity': 'text' }">{{location.quantity}}</td>
+                <td data-title="'Location'" id="td5" sortable="'location'" filter="{ 'shipment': 'text' }">{{location.location}}</td>
+                <td data-title="'Carton'" id="td6" sortable="'carton'" filter="{ 'location': 'text' }">{{location.carton}}</td>
                 <td>
                    <div class="table-actions">
                         <a class="btn btn-default" title="View" href="/#!/locations/{{location._id}}">

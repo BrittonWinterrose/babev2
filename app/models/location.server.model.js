@@ -10,40 +10,40 @@ var mongoose = require('mongoose'),
  * Location Schema
  */
 var LocationSchema = new Schema({
-    shipment: {
+    po: {
         type: String,
         default: '',
         required: 'PO # HERE',
         trim: false
         },
-    type: {
+    upc: {
         type: String,
         default: '',
         required: 'Please Enter the UPC',
         trim: false
-        },
-    length: {
+    },
+    item: {
         type: String,
         default: '',
         required: 'Please Enter the UPC',
         trim: false
-        },
-    color: {
+    },
+    carton: {
         type: String,
         default: '',
-        required: 'Please Enter the UPC',
+        required: 'Please Enter the Carton ID',
         trim: false
-        },
+    },
     location: {
         type: String,
         default: '',
-        required: 'RACK LOCATION HERE',
+        required: 'Please Enter the UPC',
         trim: false
-        },
+    },
     quantity: {
         type: Number,
         default: '',
-        required: 'QTY?',
+        required: 'Quantity?',
         trim: false
     },
     created: {
